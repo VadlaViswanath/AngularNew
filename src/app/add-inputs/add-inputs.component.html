@@ -1,0 +1,25 @@
+<form [formGroup]="myform">
+    First Name:
+    <input type="text" formControlName="firstname">
+    
+    <fieldset>
+        <legend>skills | <span class="glyphicon glyphicon-plus" (click)="addSkill()"></span></legend>
+        <!-- <div formArrayName="skills"> -->
+        <div class="input-group" *ngFor="let skillControl of myform.get('skills').controls; let i= index">
+            <input type="text" class="form-control" [formControlName]="i" placeholder="skills" name="skills">
+            <span class="input-group-addon glyphicon glyphicon-trash" (click)="deleteSkill(i)"></span>
+        </div> 
+         <!-- </div> -->
+    </fieldset>
+
+    
+    
+    
+    <input type="submit" value="submit" (click)="submit()"><br>
+
+    <div [innerHTML]="msg">
+
+    </div>
+
+
+</form>

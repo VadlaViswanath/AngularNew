@@ -1,0 +1,6 @@
+<input type="text" [(ngModel)]="data">
+<button (click)="add()">Add</button>
+
+<ul *ngFor="let data of ArrayData">
+    <li (click)="strike2(data.list)" [style.textDecoration]="data.txt?'line-through':none">{{data.list}}</li>
+</ul>

@@ -1,0 +1,12 @@
+<p>I am from first component</p>
+
+<div class="form-group col-sm-6">
+    <label>Range :</label>
+    <span>0</span>
+    <input type="range" [(ngModel)]="range" min="0" max="1000000" >
+    <span>{{range | range}}</span>
+    <input type="text" [(ngModel)]="range">
+</div>
+
+
+<h4>Your range money is : {{range | currency:"INR"}}</h4>

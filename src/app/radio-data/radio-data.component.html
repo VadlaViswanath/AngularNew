@@ -1,0 +1,10 @@
+<div class="container" *ngFor="let opt of userData">
+    <form>
+        <input type="radio" [(ngModel)]="opt.flag" name="opt.name" (change)="changeData(opt)">{{opt.name}}
+    </form>
+</div>
+
+<div *ngFor="let data of userDetails">
+    <h3>Gender:{{data.gender}}</h3>
+    <h3>Age:{{data.age}}</h3>
+</div>
